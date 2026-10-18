@@ -1,0 +1,26 @@
+# Hooks de git con prek (https://github.com/j178/prek). Solo hay HTML estático y no hay CI ni herramientas propias,
+# así que bastan los hooks integrados de prek (sin red ni dependencias), todos en el commit. Ver README.md.
+minimum_prek_version: '0.5.5'
+default_install_hook_types: [pre-commit, pre-push]
+default_stages: [pre-commit]
+
+# Cada hook lleva `stages: [pre-commit]` explícito: con prek 0.5.5, `default_stages` no basta y los tres últimos
+# se ejecutaban también en el pre-push.
+repos:
+  - repo: builtin
+    hooks:
+      - id: check-merge-conflict
+        stages: [pre-commit]
+      - id: check-case-conflict
+        stages: [pre-commit]
+      - id: detect-private-key
+        stages: [pre-commit]
+      - id: check-added-large-files
+        stages: [pre-commit]
+      # Formateadores: si cambian algo, el commit se para; revisa y vuelve a hacer git add.
+      - id: trailing-whitespace
+        stages: [pre-commit]
+      - id: end-of-file-fixer
+        stages: [pre-commit]
+      - id: mixed-line-ending
+        stages: [pre-commit]
