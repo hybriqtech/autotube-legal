@@ -12,10 +12,10 @@ Una vez por máquina:
 
 ```bash
 uv tool install prek==0.5.5   # deja prek.exe en ~/.local/bin, que está en el PATH
-prek install                  # desde cualquier worktree
+prek install --allow-missing-config   # desde cualquier worktree
 ```
 
-prek se instala fuera del repo, a propósito: los hooks viven en el `.git/hooks` común a todos los worktrees y guardan la ruta del `prek` con el que se instalaron. Una rama sin `.pre-commit-config.yaml` no ejecuta nada.
+prek se instala fuera del repo, a propósito: los hooks viven en el `.git/hooks` común a todos los worktrees y guardan la ruta del `prek` con el que se instalaron. Con `--allow-missing-config`, una rama sin `.pre-commit-config.yaml` no ejecuta nada; sin esa opción, cualquier commit en ella falla.
 
 ### Qué corre
 
