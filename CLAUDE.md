@@ -2,7 +2,7 @@
 
 ## Proyecto
 
-Páginas estáticas (inicio y política de privacidad) servidas con GitHub Pages para la pantalla de consentimiento OAuth de autotube.
+Páginas estáticas (inicio, privacidad con borrado de datos y términos) servidas con GitHub Pages para las apps de autotube en Google, Meta y TikTok.
 
 ## Hooks de git
 

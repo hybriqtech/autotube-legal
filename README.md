@@ -1,6 +1,6 @@
 # autotube-legal
 
-Páginas legales mínimas (inicio y política de privacidad) para la pantalla de consentimiento OAuth de autotube.
+Páginas legales mínimas (inicio, política de privacidad con borrado de datos y términos de uso) para las apps de autotube en Google, Meta y TikTok.
 
 ## Hooks de git (prek)
 
